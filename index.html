@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamzzz Project x HTR Family | Free API Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
+
+    <!-- Background Glow Effect -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 -right-40 w-96 h-96 bg-cyan-600/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="relative z-10 border-b border-slate-800/80 bg-slate-900/50 backdrop-blur-md sticky top-0">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center font-extrabold text-white shadow-lg shadow-indigo-500/30">
+                    M
+                </div>
+                <div>
+                    <span class="font-bold tracking-tight text-white block text-sm">Mamzzz Project</span>
+                    <span class="text-[10px] text-indigo-400 font-medium tracking-wider uppercase">x HTR Family</span>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse mr-1.5"></span>
+                    API Systems Online
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative z-10 max-w-5xl mx-auto px-6 py-12 flex-grow">
+        
+        <!-- Hero Section -->
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-4">
+                <span>⚡ Free & Fast Public Endpoints</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+                Next-Gen <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Free API Key</span> Hub
+            </h1>
+            <p class="text-slate-400 text-sm sm:text-base">
+                Platform penyedia API key gratis untuk mendukung pengembangan bot WhatsApp, aplikasi web, dan eksperimen koding komunitas HTR Family.
+            </p>
+        </div>
+
+        <!-- Generator Card -->
+        <div class="max-w-xl mx-auto bg-slate-900/80 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl mb-12">
+            <h2 class="text-lg font-bold text-white mb-2">Generate Your API Key</h2>
+            <p class="text-xs text-slate-400 mb-6">Klik tombol di bawah untuk mendapatkan akses kunci API gratis secara instan.</p>
+            
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-2">Your Generated API Key</label>
+                    <div class="flex items-center space-x-2">
+                        <input type="text" id="apiKeyBox" readonly value="Click generate button below..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-xs text-indigo-300 font-mono focus:outline-none focus:border-indigo-500">
+                        <button onclick="copyKey()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-3 rounded-xl text-xs font-semibold transition active:scale-95 cursor-pointer">
+                            Copy
+                        </button>
+                    </div>
+                </div>
+                <button onclick="generateKey()" class="w-full bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-semibold py-3 rounded-xl text-sm transition shadow-lg shadow-indigo-600/20 active:scale-[0.99] cursor-pointer">
+                    Generate New API Key 🚀
+                </button>
+            </div>
+        </div>
+
+        <!-- Endpoints Grid -->
+        <div class="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+            <div class="bg-slate-900/50 border border-slate-800/80 p-5 rounded-xl hover:border-slate-700 transition">
+                <div class="text-indigo-400 font-semibold text-sm mb-1">🤖 AI & Chatbot API</div>
+                <p class="text-xs text-slate-400">Endpoint pintar untuk integrasi asisten virtual dan bot otomatis.</p>
+            </div>
+            <div class="bg-slate-900/50 border border-slate-800/80 p-5 rounded-xl hover:border-slate-700 transition">
+                <div class="text-cyan-400 font-semibold text-sm mb-1">🛠️ Utility & Tools API</div>
+                <p class="text-xs text-slate-400">Kumpulan alat pengunduh media, checker, dan utilitas developer.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-slate-800/80 bg-slate-900/30 py-6 text-center text-xs text-slate-500">
+        <p>© 2026 <span class="text-slate-300 font-medium">Mamzzz Project</span> & <span class="text-slate-300 font-medium">HTR Family</span>. All rights reserved.</p>
+    </footer>
+
+    <!-- Script Generator -->
+    <script>
+        function generateKey() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let key = 'HTR-MAMZZZ-';
+            for (let i = 0; i < 24; i++) {
+                key += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            document.getElementById('apiKeyBox').value = key;
+        }
+
+        function copyKey() {
+            const box = document.getElementById('apiKeyBox');
+            if(box.value.includes('Click generate')) {
+                alert('Generate API Key terlebih dahulu!');
+                return;
+            }
+            navigator.clipboard.writeText(box.value);
+            alert('API Key berhasil disalin ke clipboard! 📋');
+        }
+    </script>
+</body>
+</html>
